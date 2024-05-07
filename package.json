@@ -1,0 +1,23 @@
+{
+  "name": "interactive_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "cd serve && npm install",
+    "start": "webpack --mode=development --watch",
+    "serve": "./serve/bin/serve -d ./public -p 5555 -h -r",
+    "https": "http-server -S -C ~/.cert/cert.pem -K ~/.cert/key.pem -p 5555",
+    "serve.bat": "call ./serve/bin/serve.bat -d public -p 5555 -h -r",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "8gui": "^1.1.1",
+    "animejs": "^3.2.1",
+    "three": "^0.150.1"
+  }
+}

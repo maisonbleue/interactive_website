@@ -1,0 +1,292 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    /* overflow: hidden; */
+    background-color: black;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+  }
+
+@font-face {
+    font-family: montserrat-semibold;
+    src: url(./assets/Montserrat-SemiBold.ttf);
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.diamond-img {
+    z-index: 100;
+    scale: 0.1;
+    opacity: 20%;
+}
+
+.flamingo-logo-intro {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 10vw;
+}
+
+#menu {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.flamingo-logo {
+    margin: 0;
+    position: fixed;
+    top: 10%;
+    left: 8%;
+    transform: translateY(-50%);
+    height: 12vh;
+    opacity: 0%;
+    transition: opacity 0.3s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.contact-button {
+    margin: 0;
+    position: fixed;
+    top: 10%;
+    left: 85%;
+    transform: translateY(-50%);
+    opacity: 0%;
+    transition: opacity 0.3s;
+    width: 8%;
+    height: 8%;
+    cursor: pointer;
+}
+
+.project-button {
+    margin: 0;
+    position: fixed;
+    top: 10%;
+    left: 75%;
+    transform: translateY(-50%);
+    opacity: 0%;
+    transition: opacity 0.3s;
+    width: 8%;
+    height: 8%;
+    cursor: pointer;
+}
+
+
+.point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.point .floating-button {
+    transition: transform 0.3s;
+    width: 60px;
+    cursor: pointer;
+    opacity: 0%;
+}
+
+.point.visible .floating-button {
+    transform: scale(1, 1);
+    overflow: hidden;
+    opacity: 70%;
+}
+
+.visible {
+    opacity: 100%;
+}
+
+.scroll-hint {
+    z-index: 10;
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 12vh;
+    opacity: 0%;
+    transition: opacity 0.3s;
+}
+
+.wrapper {
+    overflow-x: hidden;
+}
+
+.bar, 
+.loading-bar-white, 
+.loading-bar-pink, 
+.loading-bar-blue {
+    position : fixed;
+    top: 70%;
+    left: 35%;
+    width: 30%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.223);
+    transform-origin: top left;
+    z-index: 10;
+}
+
+.loading-bar-white {
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 1.0s;
+    z-index: 13;
+}
+
+.loading-bar-pink {
+    background-color: #FF66C7;
+    transform: scaleX(0);
+    transition: transform 1.0s;
+    z-index: 12;
+}
+
+.loading-bar-blue {
+    background-color: #6666FF;
+    transform: scaleX(0);
+    transition: transform 1.0s;
+    z-index: 11;
+}
+
+.bar.loaded, 
+.loading-bar-white.loaded, 
+.loading-bar-pink.loaded, 
+.loading-bar-blue.loaded {
+    transform: scaleX(0);
+    transition: transform 1.0s;
+}
+
+.loading-text {
+    position: fixed;
+    z-index: 10;
+    color: white;
+    top: 74%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-family: montserrat-semibold;
+}
+
+.loading-text.loaded,
+.flamingo-logo-intro.loaded {
+    opacity: 0%;
+    transition: opacity 0.5s;
+}
+
+
+.enter-button {
+    position : fixed;
+    opacity: 0%;
+    top: 73%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 165px;
+    height: 34px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.enter-button.loaded {
+    opacity: 100%;
+    transition: opacity 0.5s;
+}
+
+.project-button.entered, 
+.contact-button.entered,
+.flamingo-logo.entered,
+.scroll-hint.entered {
+    opacity: 100%;
+    transition: opacity 0.5s;
+}
+
+.project-page {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 70%;
+    /* background-color: red; */
+    background-color: #191919c5;
+    z-index: 10;
+    border-radius: 2em;
+    overflow-x: scroll;
+}
+
+.cross-project-page {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-content: start;
+    justify-content: start;
+    align-items: start;
+    justify-items: start;
+    row-gap: 15px;
+    padding: 97px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.item {
+    display: block;
+    width: 300px;
+    margin: auto;
+}
+
+.project-video {
+    display: none;
+}
+
+.project-title {
+    width: 250px;
+    display: block;
+    margin: auto;
+}
+
+.page-bg {
+    display: none;
+    background-color: #00000073;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+.main {
+    width: 100vw;
+    height: 4500px;
+    z-index: 99;
+    position: absolute;
+    pointer-events: none;
+}

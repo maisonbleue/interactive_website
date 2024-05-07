@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <title>Flamingo Filter Website</title>
+  </head>
+  <body>
+    <div id="grid"></div>
+    <div class="wrapper">
+      <div class="project-page">
+        <img class="cross-project-page" src="./assets/cross.png">
+        <div class="projects">
+          <ul class="item">
+            <video onmouseover="document.playVideo(this)" onmouseleave="document.stopVideo(this)" class="project-video" src="./assets/PROJECTS/VERSAILLES.mp4"></video>
+            <img class="project-title" src="./assets/PROJECTS/VERSAILLES.png">
+          </ul>
+          <ul class="item">
+            <video onmouseover="document.playVideo(this)" onmouseleave="document.stopVideo(this)" class="project-video" src="./assets/PROJECTS/LAKINGS.mp4"></video>
+            <img class="project-title" src="./assets/PROJECTS/LAKINGS.png">
+          </ul>
+          <ul class="item">
+            <video onmouseover="document.playVideo(this)" onmouseleave="document.stopVideo(this)" class="project-video" src="./assets/PROJECTS/RATP_LEGO.mp4"></video>
+            <img class="project-title" src="./assets/PROJECTS/RATP_LEGO.png">
+          </ul>
+          <ul class="item">
+            <video onmouseover="document.playVideo(this)" onmouseleave="document.stopVideo(this)" class="project-video" src="./assets/PROJECTS/LAKINGS.mp4"></video>
+            <img class="project-title" src="./assets/PROJECTS/LAKINGS.png">
+          </ul>
+          <ul class="item">
+            <video onmouseover="document.playVideo(this)" onmouseleave="document.stopVideo(this)" class="project-video" src="./assets/PROJECTS/LAKINGS.mp4"></video>
+            <img class="project-title" src="./assets/PROJECTS/LAKINGS.png">
+          </ul>
+          <ul class="item">
+            <video onmouseover="document.playVideo(this)" onmouseleave="document.stopVideo(this)" class="project-video" src="./assets/PROJECTS/LAKINGS.mp4"></video>
+            <img class="project-title" src="./assets/PROJECTS/LAKINGS.png">
+          </ul>
+        </div>
+      </div>
+      <div class="page-bg"></div>
+      <img class="flamingo-logo" src="./assets/flamingo_logo.png">
+      <img class="flamingo-logo-intro" src="./assets/flamingo_logo.png">
+      <div class="loading-bar-blue"></div>
+      <div class="loading-bar-pink"></div>
+      <div class="loading-bar-white"></div>
+      <div class="bar"></div>
+      <p class="loading-text">0%</p>
+      <lottie-player 
+        class="enter-button"
+        src="./assets/enter_button.json">
+    </lottie-player>
+      <canvas class="webgl"></canvas>
+        <lottie-player 
+          class="contact-button" 
+          src="./assets/contact_button.json">
+        </lottie-player>
+        <lottie-player 
+          class="project-button" 
+          src="./assets/projects_button.json">
+        </lottie-player>
+      <img class="scroll-hint" src="./assets/SCROLL.png">
+      </div>
+      <div class="point point-1" style="position: fixed;">
+        <lottie-player id="button-2" class="floating-button"
+        src="./assets/interest.json">
+      </lottie-player>
+      <video id="video0" class="project-video" src="./assets/PROJECTS/LAKINGS_PROJECT_0.mp4"></video>
+      <video id="video1" class="project-video" src="./assets/PROJECTS/LAKINGS_PROJECT_1.mp4"></video>
+      <video id="video2" class="project-video" src="./assets/PROJECTS/LAKINGS_PROJECT_2.mp4"></video>
+      <video id="video3" class="project-video" src="./assets/PROJECTS/LAKINGS_PROJECT_3.mp4"></video>
+      <video id="video4" class="project-video" src="./assets/PROJECTS/LAKINGS_PROJECT_4.mp4"></video>
+      <video id="video5" class="project-video" src="./assets/PROJECTS/LAKINGS_PROJECT_5.mp4"></video>
+      <video id="video6" class="project-video" src="./assets/PROJECTS/LAKINGS_PROJECT_6.mp4"></video>
+      <video id="video7" class="project-video" src="./assets/PROJECTS/LAKINGS_PROJECT_7.mp4"></video>
+      </div>
+    </div>
+    <div id="main" class="main"></div>
+    <script type="module" src="./packed.js"></script>
+  </body>
+</html>
